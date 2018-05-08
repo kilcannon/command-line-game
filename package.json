@@ -1,0 +1,23 @@
+{
+  "name": "npm_dependencies",
+  "version": "1.0.0",
+  "description": "",
+  "main": "letters.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kilcannon/command-line-game.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kilcannon/command-line-game/issues"
+  },
+  "homepage": "https://github.com/kilcannon/command-line-game#readme",
+  "dependencies": {
+    "inquirer": "^5.2.0",
+    "prompt": "^1.0.0"
+  }
+}
