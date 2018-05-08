@@ -51,12 +51,27 @@ function responseChecker(guess) {
 }
 
 //function that checks whether any letters still contain the false boolean value
-function wordCompletion() {
+// function wordCompletion() {
+//   for (var i = 0; i < letterBank.length; i++) {
+//     if (letterBank[i].boolean === false) {
+//       letterGuessPrompt()
+//       return
+//     }
+//   }
+// }
+
+function gameRestart() {
+  var booleanArray = []
   for (var i = 0; i < letterBank.length; i++) {
-    if (letterBank[i].boolean === false) {
-      letterGuessPrompt()
-      return
-    }
+    booleanArray.push(letterBank[i].boolean)
+  }
+  if (booleanArray.includes(false)) {
+    letterGuessPrompt()
+    return
+  }
+  else {
+    gameLaunch()
+    return
   }
 }
 
@@ -126,7 +141,8 @@ inquirer
       gameUpdate(response.letterGuess)
 
       //checks if word is complete; launches prompt again if not complete
-      wordCompletion()
+      gameRestart()
+
     })
   }
 }
